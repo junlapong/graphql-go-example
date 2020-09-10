@@ -1,0 +1,16 @@
+@baseUrl=http://localhost:3000/graphql
+
+###
+POST {{baseUrl}}
+Content-Type: application/graphql
+
+query {
+  human(id: "1000") {
+    name,
+    friends {
+      id,
+      name,
+      appearsIn
+    }
+  }
+}
